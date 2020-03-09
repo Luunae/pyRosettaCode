@@ -1,3 +1,5 @@
+# Task: Left factorials: 0(1)10, 20(10)110, 1_000(1_000)10_000
+
 import timeit
 from functools import lru_cache
 
