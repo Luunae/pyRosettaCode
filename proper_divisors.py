@@ -22,9 +22,9 @@ def pt_one():  # Display all proper divisors for numbers 1 to 10, inclusive.
         print(f"{i} has {results[1]} proper divisors: {results[2]}")
 
 
-def pt_two():  # Find number in range(1,20_000) with most proper divisors.
+def pt_two(low, high):  # Find number in range(1,20_001) with most proper divisors.
     max = [0, 0, 0]
-    for i in range(1, 20_001):
+    for i in range(low, high):
         num = pd(i)
         max = check_if_max(num, max)
     print(f"The number with the most pdivs is: {max[0]}")
@@ -38,9 +38,6 @@ def check_if_max(current, max):
         return max
 
 
-def go():
+if __name__ == "__main__":
     pt_one()
-    pt_two()
-
-
-go()
+    pt_two(1, 20_001)

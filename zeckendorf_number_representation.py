@@ -39,5 +39,6 @@ def fib(x):
     return fibnum
 
 
-for i in range(20):
-    znr(i)
+if __name__ == "__main__":
+    for i in range(20):
+        znr(i)
