@@ -3,15 +3,16 @@
 # -Use it to show the proper divisors of the numbers one to ten inclusive.
 # -Find a number in the range 1 to 20_000 with the most proper divisors.
 # --Show the number and just the count of how many proper divisors it has.
+import functools
 
 
+@functools.lru_cache(maxsize=None)
 def pd(x):
     divisors = []
     for i in range(1, x):
         if x % i == 0:
             divisors.append(i)
     leng = len(divisors)
-    divisors = str(divisors)[1:-1]
     pd = [x, leng, divisors]
     return pd
 
